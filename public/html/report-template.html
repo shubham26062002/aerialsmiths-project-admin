@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            color: black;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="font-size: 10pt;">{{ADDRESS}}</p>
+
+    <p style="font-size: 10pt; margin-top: 8mm;">Attention: {{CLIENT_NAME}}</p>
+
+    <h1
+        style="font-size: 14pt; margin-top: 10mm; font-weight: 700; margin-left: auto; margin-right: auto; text-align: center;">
+        {{TITLE}}</h1>
+
+    <div style="margin-top: 8mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">Customer’s Instructions</h3>
+        <p style="font-size: 10pt; text-align: justify;">We were instructed to complete an underground service
+            investigation at the above location
+            using Ground Penetrating Radar (GPR) to detect and mark out underground services prior to
+            civil works.</p>
+    </div>
+
+    <div style="margin-top: 6mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">Date of Service</h3>
+        <p style="font-size: 10pt; text-align: justify;">{{DATE_OF_SERVICE}}</p>
+    </div>
+
+    <div style="margin-top: 6mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">GPS and GIS Data</h3>
+        <p style="font-size: 10pt; text-align: justify;">GPS data collection accuracy will vary depending on the number
+            of satellites used, presence
+            of obstructions, satellite geometry, occupation time, and atmospheric conditions. This GPS
+            based data holds a maximum vertical and horizontal tolerance of ± 50 mm though is generally
+            captured with a maxi- mum tolerance of ± 25 mm. </p>
+    </div>
+
+    <div style="margin-top: 6mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">Quality Level (as per AS 5488.1:2019)</h3>
+        <p style="font-size: 10pt; text-align: justify;">The majority of the data presented here is considered Quality
+            Level B (QL-B) and physical
+            verification is always advised. In some locations an approximate depth was unable to be
+            gathered and these locations should be treated with caution. </p>
+        <p style="font-size: 10pt; text-align: justify;">QL-B provides relative subsurface feature locations in three
+            dimensions. The minimum
+            requirement for QL-B is relative spatial position, which can be achieved via an
+            electromagnetic frequency locating device. An electronic lo- cation provided by a locator to
+            QL-B standard has a maximum horizontal tolerance of ± 300 mm and a maximum vertical
+            tolerance of ± 500 mm. </p>
+    </div>
+
+    <div style="margin-top: 6mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">Underground Services Location Limitations </h3>
+        <p style="font-size: 10pt; text-align: justify;">The purpose of Underground Services Location is to locate known
+            services using plans as a
+            guide, EMI (Electromagnetic Induction tools), GPR (Ground Penetrating Radar), manhole
+            lifters, and visual observation. </p>
+        <ul style="list-style-type: disc; padding-left: 14pt; margin-left: 14pt;">
+            <li style="font-size: 10pt; text-align: justify;">Without directly observing a pipe or cable, we cannot
+                always identify what the
+                service
+                is. </li>
+            <li style="font-size: 10pt; text-align: justify;">Due to the inherent nature of the ground (e.g. how
+                saturated it may be, the type of
+                substrate or abundance of sand or high electro-magnetic geology) it is possible that
+                some services may not be locatable. </li>
+            <li style="font-size: 10pt; text-align: justify;">Without directly observing a pipe or cable, we cannot
+                always identify what the
+                service
+                is. </li>
+            <li style="font-size: 10pt; text-align: justify;">Where services are congested or the material, depth, and
+                size of the service is
+                incompatible with our locating tools, it is not always possible to confidently assess the
+                location or existence of these services. </li>
+            <li style="font-size: 10pt; text-align: justify;">Sometimes a cable may be too small to be picked up by the
+                GPR. </li>
+            <li style="font-size: 10pt; text-align: justify;">Where fibre is laid on its own, it cannot be located with
+                cable locators or GPR. </li>
+            <li style="font-size: 10pt; text-align: justify;">Abandoned and/or unmapped services and anomalies may be
+                identified during the
+                investigation. </li>
+            <li style="font-size: 10pt; text-align: justify;">It is possible that a strong conductor may mask the
+                presence of other services that are
+                poor conductors, e.g. a high voltage cable will likely make it difficult to detect other
+                lower voltage cables, pipes, etc. </li>
+            <li style="font-size: 10pt; text-align: justify;">Our marking onsite/reporting represents our best
+                assessment of the underground
+                services, but due to the subjective nature of service locating, we take no responsibility
+                for any inaccuracies or misinterpretations. </li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 6mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">Method </h3>
+        <ul style="list-style-type: disc; padding-left: 14pt; margin-left: 14pt;">
+            <li style="font-size: 10pt; text-align: justify;">Aerialsmiths in-house Standard Operating Procedure for
+                Underground Services
+                Location. </li>
+            <li style="font-size: 10pt; text-align: justify;">Aerialsmiths in-house Standard Operating Procedure for GPS
+                Data Collection. </li>
+            <li style="font-size: 10pt; text-align: justify;">Aerialsmiths in-house Standard Operating Procedure for
+                Creating a Service Diagram
+                in ArcGIS/AutoCAD software. </li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 6mm; display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">Results & Site-Specific Remarks </h3>
+        <p style="font-size: 10pt; text-align: justify;">The following is provided: </p>
+        <ul style="list-style-type: disc; padding-left: 14pt; margin-left: 14pt;">
+            <li style="font-size: 10pt; text-align: justify;">Site photos of GPR mark-outs with some additional
+                information provided where
+                necessary </li>
+            <li style="font-size: 10pt; text-align: justify;">GPR Output Displays - Graphical visualisations of the GPR
+                results at various locations
+                within the inspected area (full results in separate documents – provided upon
+                request). </li>
+        </ul>
+        <p style="font-size: 10pt; text-align: justify;">Marked-out locations that show no associated depths were either
+            EMI signal only (i.e. could have
+            been too deep for the GPR to pick up) or had no change in depth from points gathered either side
+            of it. Utility Mark-out colours:</p>
+        <ul style="list-style-type: disc; padding-left: 14pt; margin-left: 14pt;">
+            <li style="font-size: 10pt; text-align: justify;">Orange = Electricity, mark-out code = E </li>
+            <li style="font-size: 10pt; text-align: justify;">Purple = Comms, mark-out code = C </li>
+            <li style="font-size: 10pt; text-align: justify;">Yellow = Gas, mark-out code = GAS </li>
+            <li style="font-size: 10pt; text-align: justify;">Blue = Water, mark-out code = W </li>
+            <li style="font-size: 10pt; text-align: justify;">Red = Wastewater, mark-out code = WW </li>
+            <li style="font-size: 10pt; text-align: justify;">Green = Stormwater, mark-out code = SW; or Fibre, mark-out
+                code = F</li>
+            <li style="font-size: 10pt; text-align: justify;">White/Pink = unknown </li>
+        </ul>
+    </div>
+
+    <div style="break-before: page;" />
+
+    <div
+        style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2mm; break-inside: avoid;">
+        <!-- <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 1" />
+        <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 2" />
+        <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 3" />
+        <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 5" />
+        <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 2" />
+        <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 3" />
+        <img style="width: 100%; height: auto; object-fit: cover; border: 1px solid black; aspect-ratio: 1 / 1.3;"
+            src="https://thumbs.dreamstime.com/b/traffic-streets-skyscrapers-night-portrait-format-city-hong-kong-china-buildings-331021676.jpg"
+            alt="Image 5" /> -->
+        {{IMAGES}}
+    </div>
+
+    <div style="break-before: page;" />
+
+    <div style="display: flex; flex-direction: column; row-gap: 4mm;">
+        <h3 style="font-size: 12pt; font-weight: 700;">General Remarks</h3>
+        <p style="font-size: 10pt; text-align: justify;">This report has been prepared for the benefit of Optimal GPR
+            and CCTV with respect to the
+            particular brief given to us and it cannot be relied upon in other contexts or for any other
+            purpose without our prior review and agreement. </p>
+        <p style="font-size: 10pt; text-align: justify;">Disclaimer: Although every endeavour is made to locate all
+            services, the Client should be
+            aware that it’s still possible to miss shallow or abandoned assets, so care must still be taken
+            when excavating around services.</p>
+        <p style="font-size: 10pt; text-align: justify;">The Heights shown are to the top of the asset, and are
+            indicative only, and where an assets
+            height is critical, further methods should be used to certify an exact height, i.e., piloting, hydro
+            excavating, CCTV Works etc. </p>
+        <p style="font-size: 10pt; text-align: justify;">This Company’s Liability to the information provided, is only
+            to the total sum of the invoice
+            amount and will not be liable for Damage to Buried assets, should this occur. </p>
+        <p style="font-size: 10pt; text-align: justify;">Please reproduce this report in full when transmitting to
+            others or including in internal
+            reports.</p>
+        <p style="font-size: 10pt; text-align: justify;">If we can be of any further assistance, feel free to get in
+            touch. Contact details are provided at
+            the bottom of the letterhead page. </p>
+    </div>
+
+    <p style="font-size: 10pt; margin-top: 10mm;">Regards,<br />Aerialsmiths New Zealand Ltd</p>
+
+    <div style="display: flex; flex-direction: column; row-gap: 4mm; margin-top: 10mm;">
+        <p style="font-size: 10pt; text-align: justify;">Data collected and report prepared by:</p>
+        <div style="border-bottom: 1px dashed black; width: fit-content;">
+            <img style="height: 70pt; width: 140pt; object-fit: cover;" src="{{LOCATOR_SIGNATURE_IMAGE}}"
+                alt="Locator signature image" />
+        </div>
+        <p style="font-size: 10pt;">Luke Brownlee<br />Underground Services Locator</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; row-gap: 4mm; margin-top: 10mm;">
+        <p style="font-size: 10pt; text-align: justify;">Data collected, report checked and authorised for Aerialsmiths
+            by: </p>
+        <div style="border-bottom: 1px dashed black; width: fit-content;">
+            <img style="height: 70pt; width: 140pt; object-fit: cover;" src="{{DIRECTOR_SIGNATURE_IMAGE}}"
+                alt="Director signature image" />
+        </div>
+        <p style="font-size: 10pt;">Felix Fielding<br />Director</p>
+    </div>
+</body>
+
+</html>
