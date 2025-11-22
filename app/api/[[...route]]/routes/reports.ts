@@ -4,7 +4,8 @@ import { zValidator } from "@hono/zod-validator"
 import { generateReportSchema } from "@/lib/zod-schemas"
 import fs from "fs"
 import path from "path"
-import puppeteer from "puppeteer"
+import puppeteer from "puppeteer-core"
+import chromium from "@sparticuz/chromium"
 import cloudinary from "@/lib/cloudinary"
 import { format, parseISO } from "date-fns"
 import { config } from "dotenv"
@@ -42,6 +43,8 @@ const app = new Hono()
         const formattedTemplateContent = reportTemplateContent.replaceAll("{{ADDRESS}}", formattedAddress).replaceAll("{{CLIENT_NAME}}", clientName).replaceAll("{{TITLE}}", title).replaceAll("{{DATE_OF_SERVICE}}", format(parseISO(dateOfService), "dd/MM/yyyy")).replaceAll("{{IMAGES}}", formattedImages).replaceAll("{{LOCATOR_SIGNATURE_IMAGE}}", locatorSignatureDataUri).replaceAll("{{DIRECTOR_SIGNATURE_IMAGE}}", directorSignatureDataUri)
 
         const browser = await puppeteer.launch({
+            args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
+            executablePath: await chromium.executablePath(),
             headless: true,
         })
 
